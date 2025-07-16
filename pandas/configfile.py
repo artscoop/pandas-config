@@ -1,11 +1,12 @@
+from ast import literal_eval
 from configparser import ConfigParser
 from os import PathLike
-import pandas as pd
-from ast import literal_eval
 from pathlib import Path
 
+import pandas as pd
 
 DEFAULT_FILE: str = ".pandas.ini"  # Default file name to look for
+
 
 def load(path: PathLike | str = None, encoding: str = "utf-8"):
     """
