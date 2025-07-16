@@ -1,0 +1,9 @@
+[display]
+width = 200
+max_colwidth = 25
+min_rows = 20
+max_rows = 200
+precision = 3
+
+[display.html]
+border = 4
