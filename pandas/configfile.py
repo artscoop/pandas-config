@@ -15,6 +15,8 @@ def load(path: PathLike | str = None, encoding: str = "utf-8"):
     based on the sections and values defined in the file. If no path is provided,
     it looks for a '.pandas.ini' file in the current directory.
 
+    See Also:
+        [Pandas documentation](https://pandas.pydata.org/docs/reference/api/pandas.describe_option.html#pandas-describe-option) for more details
 
     Args:
         path (PathLike, optional): Path to the configuration file. Defaults to None,
@@ -53,5 +55,5 @@ def load(path: PathLike | str = None, encoding: str = "utf-8"):
             evaluation = literal_eval(config.get(section, option))
             try:
                 pd.set_option(f"{section}.{option}", evaluation)
-            except ValueError:
+            except pd.errors.OptionError:
                 print(f"Invalid option. Skipping {section}.{option}={evaluation}")

@@ -12,17 +12,25 @@ for the options accepting literal values).
 
 To install the required dependencies:
 
+Using uv:
+
 ```bash
 uv add pandas-config
 ```
 
+Using pip:
+
+```bash
+pip install pandas-config
+```
+
 ## Usage
 
-The main module `configfile.py` contains a `load()` function that loads pandas configurations from an INI file.
+The main module `pandas.configfile` contains a `load()` function that loads pandas configurations from an INI file.
 
 ### Basic Example
 
-1. Create a `.pandas.ini` configuration file:
+1. Create a `.pandas.ini` configuration file in your current directory:
 
 ```ini
 [display]
@@ -56,20 +64,23 @@ load("path/to/config.ini")
 ## Configuration File Structure
 
 The configuration file must follow the standard INI format:
+
 - Sections define pandas option groups (e.g., `[display]`)
 - Values must be valid Python literals
 - Subsections use dot as separator (e.g., `[display.html]`)
 
+See the [Pandas documentation](https://pandas.pydata.org/docs/reference/api/pandas.describe_option.html#pandas-describe-option) for more details.
+
 ## Dependencies
 
 - pandas
-- Python 3.x
+- Python 3.10+
 
 ## Notes
 
-- Values in the configuration file must be valid Python literals (evaluated using `ast.literal_eval()`)
+- Values in the configuration file **must be valid Python literals** (evaluated using `ast.literal_eval()`)
 - The default configuration file is `.pandas.ini` in the current directory
-- If no file is found at the specified location, no error will be raised
+- If no file is found at the specified location, no error will be raised and the default configuration will be used
 
 ## Contributing
 
