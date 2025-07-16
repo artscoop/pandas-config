@@ -1,7 +1,9 @@
 [project]
 name = "pandas-config"
-version = "0.2.1"
+version = "0.2.2"
 description = "Configure pandas options simply from an INI file."
+homepage = "https://github.com/artscoop/pandas-config"
+repository = "https://github.com/artscoop/pandas-config"
 authors = [{ name = "Steve Kossouho", email = "1023091+artscoop@users.noreply.github.com" }]
 readme = "README.md"
 requires-python = ">=3.11"
