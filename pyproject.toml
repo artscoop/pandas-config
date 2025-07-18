@@ -6,8 +6,6 @@ authors = [{ name = "Steve Kossouho", email = "1023091+artscoop@users.noreply.gi
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "black>=25.1.0",
-    "isort>=6.0.1",
     "pandas>=2.0.0",
 ]
 

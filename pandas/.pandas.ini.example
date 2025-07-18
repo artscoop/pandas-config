@@ -1,8 +1,16 @@
 [display]
+; Maximum number of columns to be printed in a DataFrame
 width = 200
+
+; What to display if the DataFrame is too large. "truncate" or "info"
+large_repr = "info"
+; Maximum number of characters to be printed in a column
 max_colwidth = 25
+; Minimum number of rows to be printed
 min_rows = 20
+; Maximum number of rows to be printed
 max_rows = 200
+; Default precision for floating point output
 precision = 3
 
 [display.html]
